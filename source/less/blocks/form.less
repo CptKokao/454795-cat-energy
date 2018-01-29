@@ -1,7 +1,10 @@
 .form {
   width: 320px;
   margin: 0 auto;
+  padding-bottom: 18px;
 }
+
+// Первый блок
 
 .form__field1 {
   font-size: 16px;
@@ -13,6 +16,10 @@
   padding-right: 20px;
   margin: 0;
   border-bottom: 1px solid @grey;
+
+  & p:nth-child(1) {
+    margin-top: 19px;
+  }
 
   & p:nth-child(2) {
     margin-top: 11px;
@@ -28,7 +35,6 @@
   justify-content: space-between; // если не сработает grow
   align-items: center;
   margin: 0;
-  margin-top: 19px;
 }
 
 .form__label-text {
@@ -51,13 +57,27 @@
   }
 }
 
+// Второй блок
+
 .form__field2 {
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
   border: none;
-  padding-left: 55px;
+  padding-left: 63px;
   border-bottom: 1px solid @grey;
+
+  & p:nth-child(1) {
+    margin-top: 20px;
+  }
+
+  & p:nth-child(2) {
+    margin-top: 26px;
+  }
+
+  & p:nth-child(3) {
+    margin-top: 25px;
+  }
 }
 
 .form__input-radio {
@@ -72,46 +92,59 @@
     content: "";
     width: 28px;
     height: 28px;
-    left: -39px;
+    left: -46px;
     top: -3px;
     border-radius: 50%;
     border: 1px solid @border-grey;
   }
 }
 
+// Третий блок
+
 .form__field3 {
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
   border: none;
-  padding-left: 20px;
+  padding-left: 15px;
   border-bottom: 1px solid @grey;
+  margin-top: 28px;
+
+  & p:nth-child(2) {
+    margin-top: 25px;
+    text-transform: uppercase;
+  }
+
+  & p:nth-child(3) {
+    margin-top: 12px;
+    text-transform: uppercase;
+  }
 }
 
 .form__field3_legend {
-  width: 185px;
+  width: 215px;
   position: relative;
   margin: 28px 0 0;
-  padding-bottom: 33px;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 24px;
+  line-height: 24px;
 
   &::after {
     content: "";
     position: absolute;
     border-top: 3px solid @green;
-    right: -20px;
-    top: 12px;
-    width: 55px;
+    right: -84px;
+    top: 14px;
+    width: 100px;
   }
 }
+
+// Четвертый блок
 
 .form__field4 {
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
   border: none;
-  padding-left: 20px;
+  padding-left: 15px;
+  margin-top: 18px;
   border-bottom: 1px solid @grey;
 }
 
@@ -119,51 +152,80 @@
   width: 185px;
   position: relative;
   margin: 28px 0 0;
-  padding-bottom: 33px;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 24px;
+  line-height: 24px;
 
   &::after {
     content: "";
     position: absolute;
     border-top: 3px solid @green;
-    right: -20px;
-    top: 12px;
-    width: 55px;
+    right: -115px;
+    top: 14px;
+    width: 160px;
   }
 }
 
 .form__textarea {
-  width: 280px;
+  width: 283px;
   min-height: 150px;
-  padding-top: 15px;
-  padding-left: 15px;
+  padding-top: 13px;
+  padding-left: 17px;
+  margin-top: 30px;
+  font-family: "Oswald", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  box-sizing: border-box;
 }
+
+// Пятый блок
 
 .form__field5 {
   font-size: 16px;
   line-height: 18px;
-  text-transform: uppercase;
   border: none;
-  padding-left: 55px;
-  border-bottom: 1px solid @grey;
+  padding-left: 15px;
+  margin-top: 15px;
+
+  & p:nth-child(2) {
+    margin-top: 35px;
+    text-transform: uppercase;
+    margin-left: 48px;
+  }
+
+  & p:nth-child(3) {
+    margin-top: 25px;
+    text-transform: uppercase;
+    margin-left: 48px;
+  }
+
+  & p:nth-child(4) {
+    margin-top: 24px;
+    text-transform: uppercase;
+    margin-left: 48px;
+  }
+
+  & p:nth-child(5) {
+    margin-top: 24px;
+    text-transform: uppercase;
+    margin-left: 48px;
+  }
 }
 
 .form__field5_legend {
   width: 185px;
   position: relative;
   margin: 28px 0 0;
-  padding-bottom: 33px;
-  font-size: 16px;
-  line-height: 18px;
+  font-size: 24px;
+  line-height: 24px;
 
   &::after {
     content: "";
     position: absolute;
     border-top: 3px solid @green;
-    right: -20px;
-    top: 12px;
-    width: 55px;
+    right: -115px;
+    top: 14px;
+    width: 140px;
   }
 }
 
@@ -179,7 +241,7 @@
     content: "";
     width: 28px;
     height: 28px;
-    left: -39px;
+    left: -46px;
     top: -3px;
     border: 1px solid @border-grey;
   }
@@ -190,17 +252,18 @@
   min-height: 40px;
   padding-top: 10px;
   margin-left: 20px;
+  margin-top: 13px;
   box-sizing: border-box;
   background-color: @green;
   text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 1px;
 }
 
 .form__send {
   font-size: 16px;
   line-height: 20px;
   color: white;
+  text-transform: uppercase;
+  font-family: "Oswald", "Arial", sans-serif;
   border: none;
   background: none;
 }
@@ -208,4 +271,5 @@
 .form__required {
   font-family: "Arial", sans-serif;
   text-align: center;
+  margin-top: 16px;
 }
