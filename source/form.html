@@ -51,16 +51,16 @@
       <p class="selection__descr">Заполните анкету и мы подберем программу питания для вашего кота</p>
     </section>
 
-    <form class="form" action="index.html" method="post">
+    <form class="form" method="get" action="https://echo.htmlacademy.ru">
 
       <fieldset class="form__field1">
         <p class="form__item">
           <label class="form__label-text" for="name">Имя:<sup>&#9913;</sup></label>
-          <input class="form__input-text" type="text" name="name" value="" id="name" placeholder="Барсик" required>
+          <input class="form__input-text" type="text" name="name" id="name" placeholder="Барсик" required>
         </p>
         <p class="form__item">
           <label class="form__label-text" for="weigth">Вес (кг):<sup>&#9913;</sup></label>
-          <input class="form__input-text" type="text" name="weigth" value="" id="weigth" placeholder="7" required>
+          <input class="form__input-text" type="text" name="weigth" id="weigth" placeholder="7" required>
         </p>
         <p class="form__item">
           <label class="form__label-text" for="age">Возраст (лет):</label>
@@ -70,15 +70,15 @@
 
       <fieldset class="form__field2">
         <p class="form__weigth_loss">
-          <input class="form__input-radio" type="radio" name="weight_loss" value="" id="weight_loss" checked>
+          <input class="form__input-radio" type="radio" name="radio" value="" id="weight_loss" checked>
           <label class="form__label-radio" for="weight_loss">Похудение</label>
         </p>
         <p class="form__weigth_gain">
-          <input class="form__input-radio" type="radio" name="weigth_gain" value="" id="weigth_gain">
+          <input class="form__input-radio" type="radio" name="radio" value="" id="weigth_gain">
           <label class="form__label-radio" for="weigth_gain">Набор массы</label>
         </p>
         <p class="form__not_know">
-          <input class="form__input-radio" type="radio" name="not_know" value="" id="not_know">
+          <input class="form__input-radio" type="radio" name="radio" value="" id="not_know">
           <label class="form__label-radio" for="not_know">Не знаю (нужен ваш совет)</label>
         </p>
       </fieldset>
@@ -86,12 +86,12 @@
       <fieldset class="form__field3">
         <legend class="form__field3_legend">Контактные данные (владельца кота)</legend>
         <p class="form__item">
-          <label class="form__label-text form__label-text--email" for="email:*">e-mail:<sup>&#9913;</sup></label>
-          <input class="form__input-text" type="email" name="email" value="" id="email" placeholder="kuklachev@gmail.com">
+          <label class="form__label-text" for="email:*">e-mail:<sup>&#9913;</sup></label>
+          <input class="form__input-text" type="email" name="email" value="" id="email" placeholder="kuklachev@gmail.com" required>
         </p>
         <p class="form__item">
           <label class="form__label-text form__label-text--phone" for="phone:*">Телефон:<sup>&#9913;</sup></label>
-          <input class="form__input-text" type="phone" name="phone" value="" id="phone" placeholder="8 (960) 900-60-90" name="tel" pattern="[0-9]{1}-[0-9]{3}-[0-9]">
+          <input class="form__input-text" type="phone" name="phone" value="" id="phone" placeholder="8 (960) 900-60-90" name="tel" required>
         </p>
       </fieldset>
 

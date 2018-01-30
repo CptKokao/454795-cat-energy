@@ -4,8 +4,7 @@
   padding-bottom: 18px;
 }
 
-// Первый блок
-
+/* ------------- Первый блок -------------*/
 .form__field1 {
   font-size: 16px;
   line-height: 18px;
@@ -43,7 +42,7 @@
 
 .form__input-text {
   flex-grow: 1;
-  width: 110px; // миниммальная длина input, если не сработает grow
+  width: 110px; // минимальная длина input, если не сработает grow
   min-height: 43px;
   border: 1px solid @grey;
   padding-left: 12px;
@@ -57,8 +56,7 @@
   }
 }
 
-// Второй блок
-
+/* ------------- Второй блок -------------*/
 .form__field2 {
   font-size: 16px;
   line-height: 18px;
@@ -81,15 +79,19 @@
 }
 
 .form__input-radio {
-  display: none;
+  // absolute для отступов, opacity прозрачность
+  position: absolute;
+  opacity: 0;
 }
 
 .form__label-radio {
   position: relative;
+  cursor: pointer;
 
+  // CSS-код для радиокнопки
   &::before {
-    position: absolute;
     content: "";
+    position: absolute;
     width: 28px;
     height: 28px;
     left: -46px;
@@ -97,10 +99,32 @@
     border-radius: 50%;
     border: 1px solid @border-grey;
   }
+
+  // CSS-код для радиокнопки (checked)
+  &::after {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    border-radius: 10px;
+    background: @green;
+    opacity: 0;
+  }
 }
 
-// Третий блок
+// При нажатии на input появляеться checked для радиокнопки
+.form__input-radio:checked + .form__label-radio:after {
+  opacity: 1;
+}
 
+// При наведении на input появляеться тень вокруг input
+.form__input-radio:hover + .form__label-radio:before {
+  box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+}
+
+/* ------------- Третий блок -------------*/
 .form__field3 {
   font-size: 16px;
   line-height: 18px;
@@ -137,8 +161,7 @@
   }
 }
 
-// Четвертый блок
-
+/* ------------- Четвертый блок -------------*/
 .form__field4 {
   font-size: 16px;
   line-height: 18px;
@@ -176,10 +199,10 @@
   line-height: 18px;
   text-transform: uppercase;
   box-sizing: border-box;
+  resize: none;
 }
 
-// Пятый блок
-
+/* ------------- Пятый блок -------------*/
 .form__field5 {
   font-size: 16px;
   line-height: 18px;
@@ -230,12 +253,14 @@
 }
 
 .form__input-checkbox {
-  display: none;
+  position: absolute;
+  opacity: 0;
 }
 
 .form__label-checkbox {
   position: relative;
 
+  // CSS-код для checkbox
   &::before {
     position: absolute;
     content: "";
@@ -245,8 +270,31 @@
     top: -3px;
     border: 1px solid @border-grey;
   }
+
+  // CSS-код для checkbox (checked)
+  &::after {
+    content: "";
+    position: absolute;
+    left: -39px;
+    top: 4px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/icon-tick.svg") no-repeat;
+    opacity: 0;
+  }
 }
 
+// При нажатии на input появляеться checked для радиокнопки
+.form__input-checkbox:checked + .form__label-checkbox:after {
+  opacity: 1;
+}
+
+// При наведении на input появляеться тень вокруг input
+.form__input-checkbox:hover + .form__label-checkbox:before {
+  box-shadow: 0 0 0 3px rgba(255,255,0,.7);
+}
+
+/* ------------- Кнопка отправить -------------*/
 .form__btn {
   width: 280px;
   min-height: 40px;
