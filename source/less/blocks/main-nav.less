@@ -1,6 +1,15 @@
 .main-nav {
   width: 320px;
   margin: 0 auto;
+  display: flex;  //
+  flex-direction: column; //
+}
+
+.main-nav__bg {
+  position: absolute;
+  background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+  width: 320px;
+  height: 305px;
 }
 
 .main-nav__list {
@@ -15,6 +24,8 @@
 }
 
 .main-nav__item-logo {
+  width: 33px;
+  height: 38px;
   margin-left: 20px;
 }
 
@@ -36,9 +47,9 @@
   display: flex;
   flex-direction: column;
   list-style: none;
-  width: 320px;
   padding: 0;
   margin: 0;
+  text-transform: uppercase;
 }
 
 .main-nav__popup-item {
@@ -47,4 +58,70 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (min-width: @tablet-width) {
+
+  .main-nav {
+    width: 708px;
+    padding-left: 30px;
+    padding-right: 30px;
+    flex-direction: row;
+  }
+
+  .main-nav__bg {
+    background: none;
+  }
+
+  .main-nav__list {
+    width: 192px;
+     justify-content: flex-start;
+     border: none;
+   }
+
+   .main-nav__item-open {
+     display: none;
+   }
+
+   .main-nav__popup {
+     flex-direction: row;
+      justify-content: space-around;
+     width: 516px;
+   }
+
+   .main-nav__popup-item {
+     border: none;
+   }
+
+   .introduction {
+     width: 768px;
+   }
+
+   .introduction__hero {
+      background: none;
+   }
+
+   .introduction__title {
+     color: #111111;
+   }
+
+   .introduction__descr {
+     color: #111111;
+   }
+}
+
+@media (min-width: @desktop-width) {
+
+  .main-nav {
+    width: 1200px;
+    margin: 0 auto;
+    flex-direction: row;
+        justify-content: space-between;
+  }
+
+  .main-nav__bg {
+    background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+    width: 680px;
+    height: 700px;
+  }
 }
