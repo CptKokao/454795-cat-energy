@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
   <title>Кэт энерджи </title>
 </head>
 
@@ -13,8 +14,12 @@
 
     <ul class="main-nav__list">
       <li class="main-nav__item-logo">
-        <a href="#">
-          <img src="img/icon-logo-mobile.svg" alt="Логотип" width="33" height="38">
+        <a class="main-nav__picture-logo" href="#">
+          <picture>
+            <source srcset="img/icon-logo-mobile.svg" media="(min-width: 1200px)">
+            <source srcset="img/icon-logo-mobile.svg" media="(min-width: 768px)">
+            <img src="img/icon-logo-mobile.svg" alt="Логотип">
+        </picture>
         </a>
       </li>
       <li class="main-nav__item-header">
@@ -29,7 +34,7 @@
     </ul>
 
     <nav class="main-nav__menu">
-      <ul class="main-nav__popup  visually-hidden">
+      <ul class="main-nav__popup">
         <li class="main-nav__popup-item">
           <a class="main-nav__popup-link" href="#">Главная</a>
         </li>
@@ -40,6 +45,7 @@
           <a class="main-nav__popup-link" href="#">Подбор программы</a>
         </li>
       </ul>
+      <div class="main-nav__bg"></div>
     </nav>
 
   </header>
@@ -48,16 +54,17 @@
     <h1 class="visually-hidden">Питание для котов</h1>
 
     <div class="introduction">
-      <div class="introduction__hero">
+      <div class="introduction__wrapper">
         <h2 class="introduction__title">Функциональное питание для котов</h2>
         <p class="introduction__descr">Занялся собой? Займись котом!</p>
+        <div class="introduction__product">
+          <img src="img/index-can-mobile@1x.png" alt="Cat Energy с курицей" width="280" height="270">
+        </div>
+        <div class="introduction__btn">
+          <a class="introduction__link" href="#">Подобрать программу</a>
+        </div>
       </div>
-      <div class="introduction__product">
-        <img src="img/index-can-mobile@1x.png" alt="Cat Energy с курицей" width="280" height="270">
-      </div>
-      <div class="introduction__btn">
-        <a class="introduction__link" href="#">Подобрать программу</a>
-      </div>
+
     </div>
 
     <section class="programs">
