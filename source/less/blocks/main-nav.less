@@ -6,8 +6,6 @@
 }
 
 .main-nav__bg {
-  position: absolute;
-  background: url("../img/index-background-mobile@1x.jpg") no-repeat;
   width: 320px;
   height: 305px;
 }
@@ -25,8 +23,12 @@
 
 .main-nav__item-logo {
   width: 33px;
-  height: 38px;
+  // height: 38px;
   margin-left: 20px;
+}
+
+.main-nav__logo {
+  display: block;
 }
 
 .main-nav__item-header {
@@ -62,14 +64,24 @@
 
 @media (min-width: @tablet-width) {
   .main-nav {
-    width: 708px;
+    width: 768px;
     padding-left: 30px;
     padding-right: 30px;
     flex-direction: row;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+
+  .main-nav__menu {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: bold;
+    width: 440px;
+    margin-top: 14px;
   }
 
   .main-nav__bg {
-    background: none;
+    display: none;
   }
 
   .main-nav__list {
@@ -78,48 +90,70 @@
     border: none;
   }
 
+  .main-nav__item-logo {
+    width: 175px;
+    margin-left: 0;
+    margin-top: 29px;
+  }
+
+  .main-nav__item-header {
+    display: none;
+  }
+
   .main-nav__item-open {
     display: none;
   }
 
   .main-nav__popup {
     flex-direction: row;
-    justify-content: space-around;
-    width: 516px;
+    justify-content: space-between;
   }
 
   .main-nav__popup-item {
     border: none;
   }
-
-  .introduction {
-    width: 768px;
-  }
-
-  .introduction__hero {
-    background: none;
-  }
-
-  .introduction__title {
-    color: #111111;
-  }
-
-  .introduction__descr {
-    color: #111111;
-  }
 }
 
 @media (min-width: @desktop-width) {
   .main-nav {
-    width: 1200px;
+    width: 1440px;
     margin: 0 auto;
+    padding: 0;
     flex-direction: row;
     justify-content: space-between;
   }
 
+  .main-nav__menu {
+    position: relative;
+    font-size: 20px;
+    width: 680px;
+    padding-right: 110px;
+    padding-left: 65px;
+    box-sizing: border-box;
+    margin-top: 45px;
+  }
+
   .main-nav__bg {
-    background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
     width: 680px;
     height: 700px;
+  }
+
+  .main-nav__popup {
+    width: 480px;
+  }
+
+  .main-nav__list {
+    width: 245px;
+    margin-left: 100px;
+    margin-top: 29px;
+  }
+
+  .main-nav__item-logo {
+    width: 202px;
   }
 }
