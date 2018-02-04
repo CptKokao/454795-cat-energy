@@ -1,14 +1,18 @@
 .features {
-  width: 280px;
+  display: flex;
+  flex-direction: column;
+  width: 320px;
   margin: 0 auto;
+  margin-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
+  box-sizing: border-box;
 }
 
 .features__title {
   font-size: 36px;
   line-height: 60px;
-  margin-top: 20px;
+  margin: 0;
   margin-bottom: 18px;
 }
 
@@ -32,4 +36,97 @@
   line-height: 18px;
   width: 200px;
   margin-left: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 45px;
+    box-sizing: border-box;
+    padding-bottom: 23px;
+    border-bottom: 1px solid @border-grey;
+  }
+
+  .features__title {
+    width: 708px;
+    font-size: 60px;
+    line-height: 60px;
+  }
+
+  .features__list {
+    width: 324px;
+    min-height: 263px;
+    margin-top: 54px;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .features__list--first {
+    background: url("../img/1.png") no-repeat 127px 0;
+  }
+
+  .features__list--second {
+    background: url("../img/2.png") no-repeat 127px 0;
+  }
+
+  .features__list--third {
+    background: url("../img/3.png") no-repeat 127px 0;
+  }
+
+  .features__list--fourth {
+    background: url("../img/4.png") no-repeat 127px 0;
+  }
+
+  .features__descr {
+    font-size: 16px;
+    line-height: 24px;
+    width: 245px;
+    margin-left: 0;
+    margin-top: 32px;
+  }
+
+  .features__text {
+    margin: 0;
+  }
+
+  .features__image {
+    width: 80px;
+    height: 80px;
+    text-align: center;
+    padding-top: 14px;
+    box-sizing: border-box;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .features {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 1440px;
+    padding-left: 110px;
+    padding-right: 100px;
+    padding-bottom: 0;
+    margin-top: 45px;
+    box-sizing: border-box;
+    border-bottom: none;
+  }
+
+  .features__title {
+    width: 1220px;
+    // margin-bottom: 72px;
+    // font-size: 60px;
+    // line-height: 60px;
+  }
+
+  .features__list {
+    width: 255px;
+    min-height: 240px;
+  }
 }

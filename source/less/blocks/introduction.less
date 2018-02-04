@@ -2,7 +2,7 @@
   width: 320px;
   min-height: 480px;
   margin: 0 auto;
-  margin-top: -225px;
+  margin-top: -305px;
   position: relative;
   display: flex;
   flex-direction: column;
@@ -16,10 +16,12 @@
 }
 
 .introduction__title {
+  width: 290px;
   font-size: 36px;
   line-height: 36px;
   color: white;
-  margin: 28px 0 0;
+  margin: 0;
+  margin-top: 28px;
   text-align: center;
 }
 
@@ -27,18 +29,20 @@
   line-height: 18px;
   color: white;
   text-transform: uppercase;
-  margin-top: 25px;
+  margin-top: 22px;
 }
 
 .introduction__product {
   position: absolute;
   top: 165px;
+  left: 20px;
 }
 
 .introduction__btn {
   width: 280px;
   height: 40px;
-  margin: 280px auto 0;
+  margin: auto 0;
+  margin-top: 286px;
   background-color: @green;
   display: flex;
   align-items: center;
@@ -55,9 +59,10 @@
   .introduction {
     width: 768px;
     min-height: 800px;
-    padding-left: 120px;
+    padding-left: 117px;
     align-items: flex-start;
     margin-top: 25px;
+    box-sizing: border-box;
   }
 
   .introduction__wrapper {
@@ -70,31 +75,63 @@
     text-align: left;
     font-size: 60px;
     line-height: 60px;
+    margin-top: 30px;
   }
 
   .introduction__descr {
     color: #111111;
     font-size: 20px;
     line-height: 20px;
-    margin-top: 45px;
+    margin-top: 40px;
   }
 
   .introduction__product {
     position: absolute;
-    top: 250px;
-    left: 250px;
+    top: 230px;
+    left: 30px;
+    width: 709px;
+    height: 460px;
   }
 
   .introduction__btn {
-    margin: 25px 0 0;
+    margin: 0;
+    margin-top: 23px;
+    margin-left: 3px;
+    width: 245px;
+    height: 52px;
     z-index: 1;
+  }
+
+  .introduction__link {
+    font-size: 20px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .introduction {
-    width: 1200px;
+    width: 1440px;
+    padding-left: 190px;
+    min-height: 555px;
     align-items: flex-start;
+    margin-left: 0;
+  }
+
+  .introduction__title {
+    width: 425px;
+}
+
+  .introduction__wrapper {
+    margin-top: 49px;
+  }
+
+  .introduction__product {
+    position: absolute;
+    top: 0;
+    left: 560px;
+  }
+
+  .introduction__btn {
+    margin-top: 35px;
     margin-left: 0;
   }
 }

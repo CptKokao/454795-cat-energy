@@ -3,20 +3,26 @@
 
 <head>
   <meta charset="UTF-8">
+  <title>Кэт энерджи </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="css/style.css" rel="stylesheet">
   <link rel="stylesheet" href="css/normalize.css">
-  <title>Кэт энерджи </title>
+  <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="js/picturefill.min.js" async></script>
+
 </head>
 
-<body class="page">
+<body>
   <header class="main-nav">
 
     <ul class="main-nav__list">
       <li class="main-nav__item-logo">
         <a class="main-nav__logo" href="#">
           <picture>
-            <source srcset="img/logo-desktop.svg" media="(min-width: 1200px)">
+            <source srcset="img/logo-desktop.svg" media="(min-width: 1440px)">
             <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
             <img src="img/icon-logo-mobile.svg" alt="Логотип">
         </picture>
@@ -36,7 +42,7 @@
     <nav class="main-nav__menu">
       <ul class="main-nav__popup">
         <li class="main-nav__popup-item">
-          <a class="main-nav__popup-link" href="#">Главная</a>
+          <a class="main-nav__popup-link main-nav__popup-link--active" href="#">Главная</a>
         </li>
         <li class="main-nav__popup-item">
           <a class="main-nav__popup-link" href="#">Каталог продукции</a>
@@ -45,10 +51,10 @@
           <a class="main-nav__popup-link" href="#">Подбор программы</a>
         </li>
       </ul>
-      <div class="main-nav__bg">
+      <div class="main-nav__popup-bg">
         <picture>
-          <source srcset="img/index-background-desktop@1x.jpg" media="(min-width: 1200px)">
-          <img src="img/index-background-mobile@1x.jpg" alt="Логотип">
+          <source srcset="img/index-background-desktop@1x.jpg 1x, img/index-background-desktop@2x.jpg 2x" media="(min-width: 1440px)">
+          <img src="img/index-background-mobile@1x.jpg" srcset="img/index-background-mobile@2x.jpg 2x" alt="Логотип">
       </picture>
       </div>
     </nav>
@@ -63,7 +69,11 @@
         <h2 class="introduction__title">Функциональное питание для котов</h2>
         <p class="introduction__descr">Занялся собой? Займись котом!</p>
         <div class="introduction__product">
-          <img src="img/index-can-mobile@1x.png" alt="Cat Energy с курицей" width="280" height="270">
+          <picture>
+            <source srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" media="(min-width: 768px)">
+            <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat Energy с курицей">
+          </picture>
         </div>
         <div class="introduction__btn">
           <a class="introduction__link" href="#">Подобрать программу</a>
@@ -78,10 +88,11 @@
 
         <ul class="programs__item">
           <li class="programs__image">
-            <img class="programs__image-slim" src="img/icon-cat-slim.svg" alt="Стройная кошка" width="35" height="49">
+            <!-- ИСПРАВИТЬ ИЗОБРАЖЕНИЕ -->
+            <img class="programs__image-slim" src="img/icon-cat-slim.svg" alt="Стройная кошка">
           </li>
           <li class="programs__name">
-            <p>Похудение</p>
+            <p class="programs__caption">Похудение</p>
           </li>
         </ul>
 
@@ -93,80 +104,121 @@
       <div class="programs__list">
         <ul class="programs__item">
           <li class="programs__image">
-            <img class="programs__image-pro" src="img/icon-cat-pro.svg" alt="Гепард" width="67" height="28">
+            <!-- ИСПРАВИТЬ ИЗОБРАЖЕНИЕ -->
+            <img class="programs__image-pro" src="img/icon-cat-pro.svg" alt="Гепард">
           </li>
           <li class="programs__name">
-            <p>Набор массы</p>
+            <p class="programs__caption">Набор массы</p>
           </li>
         </ul>
-        <p class="programs__descr">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
+        <p class="programs__descr programs__descr--width">Заработать авторитет среди дворовых котов и даже собак? Серия Cat Energy Pro поможет вашему коту нарастить необходимые мышцы!</p>
         <p class="programs__link">Каталог pro</p>
       </div>
     </section>
 
     <section class="features">
       <h2 class="features__title">Как это работает</h2>
-      <ul class="features__list">
+      <ul class="features__list features__list--first">
         <li class="features__image">
-          <img src="img/advantage-leaf@1x.png" alt="Питательные вещества" width="50 " height="50">
+          <picture>
+            <source srcset="img/advantage-leaf@1x.png 1x, img/advantage-leaf@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="img/advantage-leaf@1x.png 1x, img/advantage-leaf@2x.png 2x" media="(min-width: 768px)">
+            <img src="img/advantage-leaf@1x.png" srcset="img/advantage-leaf@2x.png 2x" alt="Питательные вещества">
+          </picture>
         </li>
         <li class="features__descr">
-          <p>Функциональное питание содержит только полезные питательные вещества.</p>
+          <p class="features__text">Функциональное питание содержит только полезные питательные вещества.</p>
         </li>
       </ul>
-      <ul class="features__list">
+      <ul class="features__list features__list--second">
         <li class="features__image">
-          <img src="img/advantage-powder@1x.png" alt="Порошок" width="50 " height="50">
+          <picture>
+            <source srcset="img/advantage-powder@1x.png 1x, img/advantage-powder@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="img/advantage-powder@1x.png 1x, img/advantage-powder@2x.png 2x" media="(min-width: 768px)">
+            <img src="img/advantage-powder@1x.png" srcset="img/advantage-powder@2x.png 2x" alt="Порошок">
+          </picture>
         </li>
         <li class="features__descr">
-          <p>Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
+          <p class="features__text">Выпускается в виде порошка, который нужно лишь залить кипятком и готово.</p>
         </li>
       </ul>
-      <ul class="features__list">
+      <ul class="features__list features__list--third">
         <li class="features__image">
-          <img src="img/advantage-dining@1x.png" alt="Фунцкциональное питание" width="50 " height="50">
+          <picture>
+            <source srcset="img/advantage-dining@1x.png 1x, img/advantage-dining@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="img/advantage-dining@1x.png 1x, img/advantage-dining@2x.png 2x" media="(min-width: 768px)">
+            <img src="img/advantage-dining@1x.png" srcset="img/advantage-dining@2x.png 2x" alt="Фунцкциональное питание">
+          </picture>
         </li>
         <li class="features__descr">
-          <p>Замените один-два приема обычной еды на наше фунцкциональное питание.</p>
+          <p class="features__text">Замените один-два приема обычной еды на наше фунцкциональное питание.</p>
         </li>
       </ul>
-      <ul class="features__list">
+      <ul class="features__list features__list--fourth">
         <li class=" features__image">
-          <img src="img/advantage-clock@1x.png" alt="Результаты через месяц " width="50 " height="50">
+          <picture>
+            <source srcset="img/advantage-clock@1x.png 1x, img/advantage-clock@2x.png 2x" media="(min-width: 1440px)">
+            <source srcset="img/advantage-clock@1x.png 1x, img/advantage-clock@2x.png 2x" media="(min-width: 768px)">
+            <img src="img/advantage-clock@1x.png" srcset="img/advantage-clock@2x.png 2x" alt="Результаты через месяц">
+          </picture>
         </li>
         <li class="features__descr">
-          <p>Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
+          <p class="features__text">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
         </li>
       </ul>
     </section>
 
     <section class="result">
-      <h2 class="result__title">Живой пример</h2>
-      <p class="result__descr">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
-      <div class="result__list">
-        <div class="result__item">
-          <p class="result__value">5 кг</p>
-          <p class="result__text">Снижение веса</p>
-        </div>
-        <div class="result__item">
-          <p class="result__value">60 дней</p>
-          <p class="result__text ">Затрачено времени</p>
+      <div class="result-wrapper">
+        <h2 class="result__title">Живой пример</h2>
+        <p class="result__descr">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.</p>
+        <div class="result__list">
+          <div class="result__item">
+            <p class="result__value">5 кг</p>
+            <p class="result__text">Снижение веса</p>
+          </div>
+          <div class="result__item">
+            <p class="result__value">60 дней</p>
+            <p class="result__text ">Затрачено времени</p>
+          </div>
+          <p class="result__cost">Затраты на питание: 15 000 руб.</p>
         </div>
       </div>
-      <p class="result__cost">Затраты на питание: 15 000 руб.</p>
-      <div class="result__image">
-        <img src="img/before-mobile@1x.png" alt="Толстый кот " width="320" height="240">
+
+      <div class="result-wrapper1">
+        <div class="result__image">
+          <div class="result__image-before">
+            <div class="result__picture-before">
+              <picture>
+                <source srcset="img/before-desktop@1x.png 1x, img/before-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/before-tablet@1x.png 1x, img/before-tablet@2x.png 2x" media="(min-width: 768px)">
+                <img src="img/before-mobile@1x.png" srcset="img/before-mobile@2x.png 2x" alt="Толстый кот">
+              </picture>
+            </div>
+          </div>
+          <div class="result__image-after">
+            <div class="result__picture-after">
+              <picture>
+                <source srcset="img/after-desktop@1x.png 1x, img/after-desktop@2x.png 2x" media="(min-width: 1440px)">
+                <source srcset="img/after-tablet@1x.png 1x, img/after-tablet@2x.png 2x" media="(min-width: 768px)">
+                <img src="img/after-mobile@1x.png" srcset="img/after-mobile@2x.png 2x" alt="Толстый кот">
+              </picture>
+            </div>
+          </div>
+        </div>
+        <ul class="result__option">
+          <li class="result__before">
+            <p>Было</p>
+          </li>
+          <li class="result__switch">
+          </li>
+          <li class="result__after">
+            <p>Стало</p>
+          </li>
+        </ul>
       </div>
-      <ul class="result__option">
-        <li class="result__before">
-          <p>Было</p>
-        </li>
-        <li class="result__switch">
-        </li>
-        <li class="result__after">
-          <p>Стало</p>
-        </li>
-      </ul>
+
+
     </section>
 
     <section class="contacts">
