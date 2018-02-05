@@ -6,6 +6,7 @@
   margin-top: 30px;
   padding-top: 15px;
   box-sizing: border-box;
+  border: 1px solid red; // временно
 }
 
 .result__title {
@@ -184,7 +185,7 @@
     top: 48px;
     left: 16px;
     width: 130px;
-    // background: white;
+    background: white;
     text-transform: lowercase;
   }
 
@@ -282,7 +283,7 @@
   .result {
     display: flex;
     background-color: white;
-    width: 1300px;
+    width: 1440px;
     min-height: 663px;
     // min-height: 705px;
     // margin: 0 auto;
@@ -296,6 +297,10 @@
     padding-left: 0;
     font-size: 60px;
     // line-height: 60px;
+  }
+
+  .result__text {
+    background: @grey;
   }
 
   .result__descr {
@@ -325,7 +330,7 @@
     padding-left: 110px;
     width: 720px;
     box-sizing: border-box;
-    background: linear-gradient(to top, #f2f2f2 67%, white 33%);
+    background: linear-gradient(to top, @grey 67%, white 33%);
   }
 
   .result-wrapper1 {
