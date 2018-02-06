@@ -29,7 +29,7 @@
   font-size: 24px;
   line-height: 37px;
   text-transform: uppercase;
-  margin-top: 8px;
+  margin-top: 7px;
   margin-left: 17px;
 }
 
@@ -89,25 +89,37 @@
   font-family: "Arial", sans-serif;
   line-height: 18px;
   border-bottom: 1px solid @border-grey;
-  margin-top: 6px;
+  margin-top: 4px;
   padding-bottom: 22px;
 }
 
 .programs__link {
-  position: relative;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
   margin-top: 20px;
+}
 
-  &::after {
+.programs__link-catalog {
+    position: relative;
+
+    &::after {
     content: "";
     position: absolute;
-    left: 96px;
+    left: 98px;
     top: 2px;
     background: url("../img/icon-right-arrow-long.svg") no-repeat;
+    background-size: 21px 17px;
     width: 24px;
-    height: 11px;
+    height: 20px;
+  }
+
+  &:hover::after {
+    background-size: 25px 17px;
+  }
+
+  &:active {
+    opacity: 0.5;
   }
 }
 
@@ -204,21 +216,39 @@
     border-bottom: none;
     margin-top: 25px;
     padding-bottom: 22px;
-    width: 375px;
-  }
-
-  .programs__descr--width {
     width: 340px;
   }
+
+  // .programs__descr--width {
+  //   width: 340px;
+  // }
 
   .programs__link {
     font-size: 20px;
     line-height: 20px;
     margin-top: 35px;
+  }
+  // убрать лишние
+  .programs__link-catalog {
+      position: relative;
 
-    &::after {
-      left: 128px;
+      &::after {
+      content: "";
+      position: absolute;
+      left: 127px;
       top: 5px;
+      background: url("../img/icon-right-arrow-long.svg") no-repeat;
+      background-size: 25px 17px;
+      width: 30px;
+      height: 20px;
+    }
+
+    &:hover::after {
+      background-size: 30px 17px;
+    }
+
+    &:active {
+      opacity: 0.5;
     }
   }
 }
