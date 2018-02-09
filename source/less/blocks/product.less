@@ -16,6 +16,7 @@
 .product__wrapper {
   min-height: 208px;
   border-bottom: 1px solid @border-grey;
+      margin-bottom: 100px;
 }
 
 .product__item {
@@ -74,4 +75,111 @@
   font-size: 16px;
   line-height: 20px;
   color: white;
+}
+
+@media (min-width: @tablet-width) {
+  .product {
+    position: relative;
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+    // margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .product__title {
+    width: 708px;
+    font-size: 60px;
+    margin-top: 55px;
+    padding-left: 0;
+    // padding-left: 20px;
+    // font-size: 36px;
+    // line-height: 60px;
+    border-bottom: none;
+  }
+
+  .product__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 325px;
+    min-height: 430px;
+    border-bottom: none;
+    background: @grey;
+    margin-top: 140px;
+    margin-right: 58px;
+    margin-bottom: 0;
+  }
+
+  .product__item {
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product__image {
+    position: absolute;
+    height: 215px;
+    width: auto;
+        margin-left: 0;
+    display: flex;
+    align-items: flex-end;
+    top: -88px;
+  }
+
+  .product__name {
+    width: 135px;
+    text-align: center;
+    // margin: 0;
+    // margin-top: 21px;
+    font-size: 20px;
+    // line-height: 20px;
+    // text-transform: uppercase;
+  }
+
+  .product__descr {
+    display: flex;
+    width: 250px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 140px;
+  }
+
+  .product__specification {
+    // display: -webkit-box;
+    // display: -ms-flexbox;
+    // display: flex;
+    // -webkit-box-pack: justify;
+    // -ms-flex-pack: justify;
+    // justify-content: space-between;
+    width: 245px;
+    flex-direction: column;
+    margin-top: 16px;
+    // font-family: "Arial", sans-serif;
+  }
+
+  .product__parametrs {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid @border-grey;
+    padding-bottom: 4px;
+    margin-top: 11px;
+    font-size: 16px;
+  }
+
+  .product__btn {
+    width: 249px;
+    margin-top: 35px;
+    // min-height: 40px;
+    // margin-left: 20px;
+    // margin-right: 20px;
+    // padding-top: 10px;
+    // box-sizing: border-box;
+    // background-color: @green;
+    // text-align: center;
+    // text-transform: uppercase;
+    // letter-spacing: 1px;
+  }
 }
