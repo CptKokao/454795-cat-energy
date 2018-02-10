@@ -10,6 +10,8 @@
 
 .more__image {
   margin-top: 27px;
+  width: 30px;
+  height: 30px;
 }
 
 .more__products {
@@ -17,7 +19,7 @@
   line-height: 20px;
   text-transform: uppercase;
   margin: 0;
-  margin-top: 17px;
+  margin-top: 22px;
 }
 
 .more__descr {
@@ -33,7 +35,7 @@
   min-height: 40px;
   margin-left: 20px;
   margin-right: 20px;
-  margin-top: 21px;
+  margin-top: 20px;
   padding-top: 10px;
   box-sizing: border-box;
   background-color: @grey;
@@ -44,11 +46,17 @@
 
 @media (min-width: @tablet-width) {
   .more {
-    width: 325px;
+    width: 323px;
     min-height: 430px;
     margin: 0;
     border: 1px solid #cdcdcd;
     margin-top: 140px;
+  }
+
+  .more__image {
+    margin-top: 55px;
+    width: 60px;
+    height: 60px;
   }
 
   .more__products {
@@ -56,7 +64,7 @@
     // line-height: 20px;
     // text-transform: uppercase;
     // margin: 0;
-    margin-top: 102px;
+    margin-top: 50px;
     width: 175px;
     text-align: center;
   }
@@ -82,5 +90,15 @@
     // text-align: center;
     // text-transform: uppercase;
     // letter-spacing: 1px;
+  }
 }
+
+@media (min-width: @desktop-width) {
+  .more {
+    width: 243px;
+  }
+
+  .more__btn {
+    width: 170px;
+  }
 }
