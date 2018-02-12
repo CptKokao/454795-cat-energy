@@ -18,28 +18,40 @@
 <body>
 
   <header class="main-nav">
-    <ul class="main-nav__list">
+    <!-- <ul class="main-nav__list">
       <li class="main-nav__item-logo">
         <a class="main-nav__logo" href="#">
           <picture>
-            <source srcset="img/logo-desktop.svg" media="(min-width: 1300px)">
-            <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
-            <img src="img/icon-logo-mobile.svg" alt="Логотип">
+
         </picture>
         </a>
       </li>
       <li class="main-nav__item-header">
         <img src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
-      </li>
+      </li> -->
       <!-- Посмотреть как сделать транформацию в крестик -->
-      <li class="main-nav__item-close visually-hidden">
+      <!-- <li class="main-nav__item-close visually-hidden">
         <img src="img/icon-plus-mobile.svg" alt="Закрыть" width="18" height="18">
       <li class="main-nav__item-open">
         <img src="img/icon-mobile-menu.svg" alt="Открыть" width="24" height="18">
       </li>
-    </ul>
+    </ul> -->
 
-    <nav class="main-nav__menu">
+    <div class="main-nav__logo">
+      <a class="main-nav__logo-image" href="#">
+        <picture>
+          <source srcset="img/logo-desktop.svg" media="(min-width: 1300px)">
+          <source srcset="img/logo-tablet.svg" media="(min-width: 768px)">
+          <img src="img/icon-logo-mobile.svg" alt="Логотип">
+        </picture>
+      </a>
+      <a class="main-nav__logo-link" href="#">
+        <img src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
+      </a>
+    </div>
+
+    <nav class="main-nav__menu main-nav--closed">
+      <button class="main-nav__btn" type="button"><span class="visually-hidden">Открыть меню</span></button>
       <ul class="main-nav__popup">
         <li class="main-nav__popup-item">
           <a class="main-nav__popup-link main-nav__popup-link--active" href="#">Главная</a>

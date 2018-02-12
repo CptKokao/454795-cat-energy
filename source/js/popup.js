@@ -1,7 +1,13 @@
-var popup = document.querySelector(".main-nav__popup");
-var open = document.querySelector(".main-nav__item-open");
+var navMain = document.querySelector('.main-nav__menu');
+var navToggle = document.querySelector('.main-nav__btn');
 
-open.addEventListener("click", function (evt) {
-evt.preventDefault();
-    popup.classList.toggle("visually-hidden");
+
+navToggle.addEventListener('click', function() {
+  if (navMain.classList.contains('main-nav--closed')) {
+    navMain.classList.remove('main-nav--closed');
+    navMain.classList.add('main-nav--opened');
+} else {
+    navMain.classList.add('main-nav--closed');
+    navMain.classList.remove('main-nav--opened');
+  }
 });
