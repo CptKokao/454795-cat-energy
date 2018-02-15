@@ -25,6 +25,14 @@
 .main-nav__logo-image {
   width: 33px;
   margin-left: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
 .main-nav__logo-link {
@@ -44,7 +52,7 @@
   background-color: white;
   cursor: pointer;
   border: none;
-  outline: none
+  outline: none;
 }
 
 // добавили гамбургер когда класс main-nav--closed
@@ -114,8 +122,17 @@
   justify-content: center;
 }
 
+// [href] применять только для href
 .main-nav__popup-link {
   letter-spacing: 1px;
+
+  &:hover[href] {
+    opacity: 0.6;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -191,8 +208,8 @@
   }
 
   .main-nav--color .main-nav--color {
-      color: white;
-      font-weight: normal;
+    color: white;
+    font-weight: normal;
   }
 
   .main-nav__menu {
@@ -207,7 +224,7 @@
 
   .main-nav__logo-image {
     width: 202px;
-    margin-left: 0px;
+    margin-left: 0;
     margin-top: 105px;
   }
 
