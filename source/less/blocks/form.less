@@ -34,6 +34,7 @@
   justify-content: space-between; // если не сработает grow
   align-items: center;
   margin: 0;
+  position: relative;
 }
 
 .form__label-text {
@@ -41,18 +42,32 @@
 }
 
 .form__input-text {
+  // position: relative; // new
   flex-grow: 1;
   width: 110px; // минимальная длина input, если не сработает grow
   min-height: 43px;
-  border: 1px solid @grey;
+  border: 1px solid #e6e6e6;
   padding-left: 12px;
-  padding-right: 15px;
+  padding-right: 35px;
+  outline: #ff8282;
 
   &[placeholder] {
     font-size: 16px;
     line-height: 18px;
     text-transform: uppercase;
     font-family: "Oswald", "Arial", sans-serif;
+  }
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 1px solid @font;
+  }
+
+  &:invalid {
+    border: 1px solid #ff8282;
   }
 }
 
@@ -97,8 +112,15 @@
     left: -46px;
     top: -3px;
     border-radius: 50%;
-    border: 1px solid @border-grey;
+    border: 1px solid #d1d1d1;
   }
+  //
+  // &::before:hover {
+  //   border: 1px solid #d6d6d6;
+  // }
+  // &::before:hover {
+  //   opacity: 0.3;
+  // }
 
   // CSS-код для радиокнопки (checked)
   &::after {
@@ -119,9 +141,19 @@
   opacity: 1;
 }
 
-// При наведении на input появляеться тень вокруг input
+// При наведении на input изменяется цвет
 .form__input-radio:hover + .form__label-radio::before {
-  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.7);
+  border: 1px solid @border-grey;
+}
+
+// При нажатии на input изменяется прозрачность
+.form__input-radio:active + .form__label-radio::before {
+  opacity: 0.3;
+}
+
+// При нажатии на input изменяется прозрачность
+.form__input-radio:active + .form__label-radio::after {
+  opacity: 0.3;
 }
 
 /* ------------- Третий блок -------------*/
@@ -133,12 +165,12 @@
   border-bottom: 1px solid @grey;
   margin-top: 28px;
 
-  & p:nth-child(2) {
+  & div:nth-child(2) {
     margin-top: 25px;
     text-transform: uppercase;
   }
 
-  & p:nth-child(3) {
+  & div:nth-child(3) {
     margin-top: 12px;
     text-transform: uppercase;
   }
@@ -160,21 +192,46 @@
     width: 100px;
   }
 }
+//
+// .form__item--email {
+//   position: relative;
+// }
 
-.form__input-text--email {
-  background: url("../img/icon-mail.svg") no-repeat;
-  background-size: 17px 13px;
-  background-position: 190px;
-  padding-right: 40px;
+.form__input-icon-wrapper {
+  position: absolute;
+  content: "";
+  width: 17px;
+  height: 13px;
+  top: 2px;
+  right: 15px;
 }
 
-.form__input-text--phone {
-  position: relative;
-  background: url("../img/icon-phone.svg") no-repeat;
-  background-size: 20px 20px;
-  background-position: 175px 10px;
-  padding-right: 40px;
+// Если .form__input-text в фокусе поменяй цвет у ~ ...
+.form__input-text:active + .form__input-icon-wrapper .form__input-icon {
+  fill: @green;
 }
+
+.form__input-text:invalid + .form__input-icon-wrapper .form__input-icon {
+  fill: #ff8282;
+}
+//
+// .form__input-text--email {
+//   position: absolute;
+//   content: "";
+//   width: 17px;
+//   height: 13px;
+//   top: 0;
+//   right: 0;
+//
+// }
+
+// .form__input-text--phone {
+//   position: relative;
+//   background: url("../img/icon-phone.svg") no-repeat;
+//   background-size: 20px 20px;
+//   background-position: 175px 10px;
+//   padding-right: 40px;
+// }
 
 /* ------------- Четвертый блок -------------*/
 .form__field4 {
@@ -215,6 +272,15 @@
   text-transform: uppercase;
   box-sizing: border-box;
   resize: none;
+  outline: none;
+
+  &:hover {
+    border: 1px solid #cdcdcd;
+  }
+
+  &:active {
+    border: 1px solid @font;
+  }
 }
 
 /* ------------- Пятый блок -------------*/
@@ -299,14 +365,34 @@
   }
 }
 
+// // При нажатии на input появляеться checked для радиокнопки
+// .form__input-checkbox:checked + .form__label-checkbox::after {
+//   opacity: 1;
+// }
+//
+// // При наведении на input появляеться тень вокруг input
+// .form__input-checkbox:hover + .form__label-checkbox::before {
+//   box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.7);
+// }
+
 // При нажатии на input появляеться checked для радиокнопки
 .form__input-checkbox:checked + .form__label-checkbox::after {
   opacity: 1;
 }
 
-// При наведении на input появляеться тень вокруг input
+// При наведении на input изменяется цвет
 .form__input-checkbox:hover + .form__label-checkbox::before {
-  box-shadow: 0 0 0 3px rgba(255, 255, 0, 0.7);
+  border: 1px solid @border-grey;
+}
+
+// При нажатии на input изменяется прозрачность
+.form__input-checkbox:active + .form__label-checkbox::before {
+  opacity: 0.3;
+}
+
+// При нажатии на input изменяется прозрачность
+.form__input-checkbox:active + .form__label-checkbox::after {
+  opacity: 0.3;
 }
 
 /* ------------- Кнопка отправить -------------*/
@@ -319,6 +405,10 @@
   box-sizing: border-box;
   background-color: @green;
   text-align: center;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
 }
 
 .form__send {
@@ -329,6 +419,11 @@
   font-family: "Oswald", "Arial", sans-serif;
   border: none;
   background: none;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .form__required {
@@ -480,15 +575,15 @@
     }
   }
 
-  .form__input-text--email {
-    background-position: 513px;
-    padding-right: 45px;
-  }
-
-  .form__input-text--phone {
-    background-position: 497px 18px;
-    padding-right: 45px;
-  }
+  // .form__input-text--email {
+  //   background-position: 513px;
+  //   padding-right: 45px;
+  // }
+  //
+  // .form__input-text--phone {
+  //   background-position: 497px 18px;
+  //   padding-right: 45px;
+  // }
 
   /* ------------- Третий блок -------------*/
   .form__field4 {
@@ -760,20 +855,20 @@
     }
   }
 
-  .form__input-text--phone {
-    width: 470px;
-    box-sizing: border-box;
-    background-position: 428px 14px;
-    padding-right: 45px;
-    padding-left: 13px;
-  }
-
-  .form__input-text--email {
-    width: 485px;
-    box-sizing: border-box;
-    background-position: 450px;
-    padding-right: 45px;
-  }
+  // .form__input-text--phone {
+  //   width: 470px;
+  //   box-sizing: border-box;
+  //   background-position: 428px 14px;
+  //   padding-right: 45px;
+  //   padding-left: 13px;
+  // }
+  //
+  // .form__input-text--email {
+  //   width: 485px;
+  //   box-sizing: border-box;
+  //   background-position: 450px;
+  //   padding-right: 45px;
+  // }
 
   .form__field4 {
     font-size: 20px;

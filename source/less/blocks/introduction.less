@@ -14,12 +14,14 @@
     background: url("../img/index-background-mobile@1x.jpg") no-repeat;
     width: 320px;
     height: 305px;
-    z-index: -1;
+    // left: 0px; // ie
+    // z-index: -1;
   }
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     &::before {
       background-image: url("../img/index-background-mobile@2x.jpg");
+      background-size: 320px;
     }
   }
 }
@@ -63,12 +65,20 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
 }
 
 .introduction__link {
   color: white;
   line-height: 18px;
   text-transform: uppercase;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -113,6 +123,11 @@
     left: -87px;
     width: 709px;
     height: 460px;
+  }
+
+  .introduction__product-image {
+    width: 709px;
+    height: 609px;
   }
 
   .introduction__btn {

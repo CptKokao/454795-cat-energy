@@ -6,14 +6,14 @@
 }
 
 .main-nav__menu {
+  position: relative;
   font-size: 20px;
   line-height: 20px;
   font-weight: bold;
 }
 
-.main-nav__list {
+.main-nav__logo {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   list-style: none;
   border-bottom: 1px solid @border-grey;
@@ -22,17 +22,87 @@
   padding: 0;
 }
 
-.main-nav__item-logo {
+.main-nav__logo-image {
   width: 33px;
   margin-left: 20px;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
 }
 
-.main-nav__item-header {
-  margin-left: -5px;
+.main-nav__logo-link {
+  margin-left: 56px;
+  margin-top: 3px;
 }
 
-.main-nav__item-open {
-  margin-right: 20px;
+// изменили кнопку
+.main-nav__btn {
+  position: absolute;
+  top: -56px;
+  right: 0;
+  z-index: 2;
+  display: block;
+  width: 50px;
+  height: 35px;
+  background-color: white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+// добавили гамбургер когда класс main-nav--closed
+.main-nav__menu--closed .main-nav__btn::before {
+  content: "";
+  position: absolute;
+  top: 13px;
+  right: 20px;
+  width: 24px;
+  height: 2px;
+  background-color: #111111;
+  box-shadow: 0 8px 0 0 #111111, 0 16px 0 0 #111111;
+}
+
+// добавили крестик когда класс main-nav--opened
+.main-nav__menu--opened .main-nav__btn {
+  top: -56px;
+  right: 0;
+
+  &::before,
+  &::after {
+    content: "";
+
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    width: 25px;
+    height: 2px;
+
+    background-color: #111111;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+// когда класс .main-nav--closed то скрываем .main-nav__popup
+.main-nav__menu--closed .main-nav__popup {
+  display: none;
 }
 
 .main-nav__popup {
@@ -52,13 +122,17 @@
   justify-content: center;
 }
 
+// [href] применять только для href
 .main-nav__popup-link {
   letter-spacing: 1px;
-}
 
-.main-nav__bg {
-  width: 320px;
-  height: 305px;
+  &:hover[href] {
+    opacity: 0.6;
+  }
+
+  &:active[href] {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -71,23 +145,17 @@
     box-sizing: border-box;
   }
 
-  .main-nav__list {
-    width: 192px;
-    justify-content: flex-start;
-    border: none;
+  .main-nav__logo {
+    border-bottom: none;
   }
 
-  .main-nav__item-logo {
-    width: 175px;
-    margin-left: 0;
+  .main-nav__logo-image {
+    width: 173px;
+    margin-left: 3px;
     margin-top: 45px;
   }
 
-  .main-nav__item-header {
-    display: none;
-  }
-
-  .main-nav__item-open {
+  .main-nav__logo-link {
     display: none;
   }
 
@@ -97,6 +165,15 @@
     font-weight: bold;
     width: 440px;
     margin-top: 20px;
+  }
+
+  .main-nav__btn {
+    display: none;
+  }
+
+  // показывет меню если на мобильной версии оно спрятано
+  .main-nav__menu--closed .main-nav__popup {
+    display: flex;
   }
 
   .main-nav__popup {
@@ -117,10 +194,6 @@
   .main-nav__popup-item {
     border: none;
   }
-
-  .main-nav__popup-bg {
-    display: none;
-  }
 }
 
 @media (min-width: @desktop-width) {
@@ -134,9 +207,9 @@
     justify-content: space-between;
   }
 
-  .main-nav__list {
-    width: 245px;
-    margin-top: 38px;
+  .main-nav--color .main-nav--color {
+    color: white;
+    font-weight: normal;
   }
 
   .main-nav__menu {
@@ -149,37 +222,26 @@
     margin-top: 0;
   }
 
+  .main-nav__logo-image {
+    width: 202px;
+    margin-left: 0;
+    margin-top: 105px;
+  }
+
   .main-nav__popup {
     width: 480px;
     margin-top: 53px;
   }
 
-  .main-nav__item-logo {
-    width: 202px;
-    margin-top: 32px;
-  }
-
-  .main-nav__popup-link {
+  // изменяет цвет текста у класса .main-nav__popup-link, если в разметке есть класс .main-nav__menu--color
+  .main-nav__menu--color .main-nav__popup-link {
     color: white;
     font-weight: normal;
   }
 
-  .main-nav__popup-link--color {
-    color: #111111;
-  }
-
-  .main-nav__popup-link--active {
+  // изменяет цвет текста у класса .main-nav__popup-link--active, если в разметке есть класс .main-nav__menu--color
+  .main-nav__menu--color .main-nav__popup-link--active {
     border-bottom: 2px solid white;
     line-height: 45px;
-  }
-
-  .main-nav__popup-bg {
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 110px;
-    z-index: -1;
-    width: 680px;
-    height: 695px;
   }
 }

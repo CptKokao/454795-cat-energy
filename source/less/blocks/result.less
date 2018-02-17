@@ -275,31 +275,38 @@
     border-radius: 10px;
     margin-top: 16px;
     margin-left: 20px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      border: 1px solid @border-grey;
+      border-radius: 50%;
+      background-color: white;
+      width: 33px;
+      height: 33px;
+      top: -15px;
+      left: 200px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      border: 1px solid  @green;
+      border-radius: 50%;
+      background-color: @green;
+      width: 8px;
+      height: 8px;
+      top: -2px;
+      left: 212px;
+    }
   }
 
-
-  .result__switch::before {
-    content: "";
-    position: absolute;
-    border: 1px solid grey;
-    border-radius: 50%;
-    background-color: white;
-    width: 33px;
-    height: 33px;
-    top: -15px;
-    left: 200px;
+  .result__switch:hover::before {
+    box-shadow: 0 3px 5px 0 @border-grey;
   }
 
-  .result__switch::after {
-    content: "";
-    position: absolute;
-    border: 1px solid grey;
-    border-radius: 50%;
-    background-color: green;
-    width: 8px;
-    height: 8px;
-    top: -2px;
-    left: 212px;
+  .result__switch:active::before {
+    border: 1px solid  @green;
   }
 }
 

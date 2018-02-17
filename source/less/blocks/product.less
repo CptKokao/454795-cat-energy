@@ -71,12 +71,20 @@
   background-color: @green;
   text-align: center;
   text-transform: uppercase;
+
+  &:hover {
+    background-color: #5eaa2f;
+  }
 }
 
 .product__order {
   font-size: 16px;
   line-height: 20px;
   color: white;
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
