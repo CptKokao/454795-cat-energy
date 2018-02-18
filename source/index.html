@@ -5,10 +5,9 @@
   <meta charset="UTF-8">
   <title>Кэт энерджи </title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="css/style.css" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet">
   <link rel="preload" href="fonts/oswaldregular.woff2" as="font">
   <link rel="preload" href="fonts/oswaldmedium.woff2" as="font">
-  <link rel="stylesheet" href="css/normalize.css">
   <script>
     // Picture element HTML5 shiv
     document.createElement( "picture" );
@@ -18,7 +17,6 @@
 </head>
 
 <body>
-
   <header class="main-nav">
 
     <div class="main-nav__logo">
@@ -29,7 +27,7 @@
           <img src="img/icon-logo-mobile.svg" alt="Логотип">
         </picture>
       </a>
-      <div class="main-nav__logo-link" href="#">
+      <div class="main-nav__logo-link">
         <img src="img/logo-mobile-header.svg" alt="Cat Energy" width="101" height="18">
       </div>
     </div>
@@ -66,7 +64,7 @@
 
             <source media="(min-width: 1300px)" srcset="img/index-can-desktop@1x.png 1x, img/index-can-desktop@2x.png 2x" >
             <source media="(min-width: 768px)" srcset="img/index-can-tablet@1x.jpg 1x, img/index-can-tablet@2x.jpg 2x" >
-            <img class="introduction__product-image" src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat Energy с курицей">
+            <img src="img/index-can-mobile@1x.png" srcset="img/index-can-mobile@2x.png 2x" alt="Cat Energy с курицей">
           </picture>
         </div>
         <div class="introduction__btn">
@@ -85,7 +83,7 @@
           </li>
         </ul>
 
-        <p class="programs__descr">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
+        <p class="programs__descr programs__descr--width">Ваш кот весит больше собаки и почти утратил способность лазить по деревьям? Пора на диету! Cat Energy Slim поможет вашему питомцу сбросить лишний вес.</p>
         <p class="programs__link">
           <a href="catalog.html#slim" class="programs__link-catalog">Каталог slim</a>
         </p>
@@ -166,7 +164,7 @@
             <p class="result__value">60 дней</p>
             <p class="result__text ">Затрачено времени</p>
           </div>
-          <p class="result__cost">Затраты на питание: 15 000 руб.</p>
+          <p class="result__cost">Затраты на питание: <span class="result__cost-value">15 000 руб.</span></p>
         </div>
       </div>
 
@@ -217,7 +215,7 @@
       <h2 class="visually-hidden">Контакты</h2>
       <div class="contacts_list">
         <p class="contacts__dealers">Приглашаем <br>к сотрудничеству дилеров!</p>
-        <p class="contacts_address">ул. Большая Конюшенная, д. 19/8 Санкт-Петербург</p>
+        <p class="contacts_address">ул. Большая Конюшенная, д. 19/8 <span class="contacts_city">Санкт-Петербург</span></p>
       </div>
       <div class="contacts_map">
         <iframe class="contacts_map-size" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.5989424123657!2d30.320894615623903!3d59.93879686904846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LCDQodCw0L3QutGCLdCf0LXRgtC10YDQsdGD0YDQsywgMTkxMTg2!5e0!3m2!1sru!2sru!4v1516182043902" style="border:0" allowfullscreen></iframe>
@@ -271,7 +269,7 @@
     </div>
   </footer>
 
-  <script src="js/popup.js"></script>
+  <script src="js/popup.min.js"></script>
 </body>
 
 </html>

@@ -9,7 +9,6 @@
   position: relative;
   font-size: 20px;
   line-height: 20px;
-  font-weight: bold;
 }
 
 .main-nav__logo {
@@ -151,7 +150,7 @@
 
   .main-nav__logo-image {
     width: 173px;
-    margin-left: 3px;
+    margin-left: 0;
     margin-top: 45px;
   }
 
@@ -162,7 +161,6 @@
   .main-nav__menu {
     font-size: 18px;
     line-height: 24px;
-    font-weight: bold;
     width: 440px;
     margin-top: 20px;
   }
@@ -188,7 +186,7 @@
   .main-nav__popup-link--active {
     border-bottom: 2px solid @green;
     line-height: 38px;
-    padding-top: 3px;
+    padding-top: 5px;
   }
 
   .main-nav__popup-item {
@@ -239,9 +237,12 @@
     font-weight: normal;
   }
 
+  .main-nav__popup-link--active {
+    padding-top: 2px;
+  }
+
   // изменяет цвет текста у класса .main-nav__popup-link--active, если в разметке есть класс .main-nav__menu--color
   .main-nav__menu--color .main-nav__popup-link--active {
     border-bottom: 2px solid white;
-    line-height: 45px;
   }
 }

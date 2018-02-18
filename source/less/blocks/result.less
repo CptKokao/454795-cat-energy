@@ -3,13 +3,14 @@
   max-width: 320px;
   min-height: 705px;
   margin: 0 auto;
-  margin-top: 30px;
+  margin-top: 24px;
   padding-top: 10px;
   box-sizing: border-box;
 }
 
 .result__title {
   margin: 0;
+  margin-top: 6px;
   padding-left: 20px;
   font-size: 36px;
   line-height: 60px;
@@ -95,7 +96,7 @@
 }
 
 .result__after {
-  margin-left: 13px;
+  margin-left: 17px;
 }
 
 .result__switch {
@@ -106,7 +107,7 @@
   border: 1px solid @border-grey;
   border-radius: 10px;
   margin-top: 19px;
-  margin-left: 21px;
+  margin-left: 18px;
 
   &::after {
     content: "";
@@ -125,45 +126,29 @@
   .result {
     background-color: white;
     max-width: 768px;
-    // min-height: 705px;
-    // margin: 0 auto;
-    margin-top: 35px;
-    // padding-top: 15px;
-    // box-sizing: border-box;
+    margin-top: 28px;
   }
 
   .result__title {
-    // margin: 0;
     padding-left: 30px;
     font-size: 60px;
-    // line-height: 60px;
   }
 
   .result__descr {
-    // font-family: "Arial", sans-serif;
     font-size: 16px;
     line-height: 24px;
     margin-top: 62px;
     padding-left: 30px;
-    // padding-right: 20px;
     width: 700px;
   }
 
   .result__list {
-    // display: flex;
     justify-content: flex-start;
-    // flex-wrap: wrap;
-    // align-items: center;
     margin-top: 53px;
     padding-left: 30px;
-    // padding-right: 20px;
   }
 
   .result__item {
-    // position: relative;
-    // text-align: center;
-    // border: 1px solid #cdcdcd;
-    // border-radius: 5px;
     width: 160px;
     height: 70px;
     margin-right: 42px;
@@ -171,17 +156,13 @@
 
   .result__value {
     font-size: 30px;
-    // text-transform: uppercase;
     line-height: 37px;
-    // margin: 0;
     margin-top: 15px;
   }
 
   .result__text {
-    // font-family: "Arial", sans-serif;
     font-size: 14px;
     line-height: 14px;
-    // position: absolute;
     top: 48px;
     left: 16px;
     width: 130px;
@@ -198,12 +179,8 @@
     text-align: right;
   }
 
-  .result-wrapper {
-    // background-color: green;
-    // background: linear-gradient(to top, #f2f2f2 67%, white 33%);
-  }
-
   .result-wrapper1 {
+    position: relative;
     background: linear-gradient(to top, #f2f2f2 68%, white 32%);
     min-height: 680px;
   }
@@ -212,7 +189,6 @@
     display: flex;
     width: 768px;
     margin-top: 37px;
-    // background: linear-gradient(to top, @grey 61%, white 39%);
   }
 
   .result__image-before {
@@ -230,7 +206,8 @@
   .result__image-after {
     display: block;
     width: 384px;
-    height: 565px;
+    height: 680px;
+    background: linear-gradient(to top, #eaeaea 68%, white 32%);
     overflow: hidden;
   }
 
@@ -241,7 +218,8 @@
   }
 
   .result__option {
-    // background: @grey;
+    position: absolute;
+    bottom: 75px;
     justify-content: flex-start;
   }
 
@@ -316,18 +294,14 @@
     background-color: white;
     max-width: 1440px;
     min-height: 645px;
-    // min-height: 705px;
-    // margin: 0 auto;
     margin-top: 0;
     padding-top: 0;
-    // box-sizing: border-box;
   }
 
   .result__title {
     margin-top: 50px;
     padding-left: 0;
     font-size: 60px;
-    // line-height: 60px;
   }
 
   .result__text {
@@ -335,17 +309,12 @@
   }
 
   .result__descr {
-    // font-size: 16px;
-    // line-height: 24px;
     margin-top: 145px;
     padding-left: 0;
     width: 435px;
   }
 
   .result__list {
-    // -webkit-box-pack: start;
-    // -ms-flex-pack: start;
-    // justify-content: flex-start;
     margin-top: 69px;
     padding-left: 0;
   }
@@ -353,11 +322,15 @@
   .result__cost {
     margin-top: 54px;
     margin-left: 0;
-    width: 270px;
+    width: 350px;
+    text-align: left;
+  }
+
+  .result__cost-value {
+    margin-left: 60px;
   }
 
   .result-wrapper {
-    // background-color: green;
     padding-left: 110px;
     width: 650px;
     box-sizing: border-box;
@@ -371,14 +344,14 @@
   }
 
   .result__image {
+    width: 790px;
     margin-top: 0;
     background: none;
-    // background: linear-gradient(to top, @grey 67%, white 33%);
   }
 
   .result__image-before {
     width: 395px;
-    height: 520px;
+    height: 650px;
     overflow: hidden;
   }
 
@@ -390,9 +363,10 @@
 
   .result__image-after {
     display: block;
-    width: 373px;
-    height: 520px;
+    width: 395px;
+    height: 650px;
     overflow: hidden;
+    background: linear-gradient(to top, #eaeaea 72%, white 28%);
   }
 
   .result__picture-after {
@@ -402,7 +376,7 @@
   }
 
   .result__option {
-    padding-top: 22px;
+    bottom: 79px;
   }
 
   .result__before {
