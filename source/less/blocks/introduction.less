@@ -10,8 +10,7 @@
   &::before {
     content: "";
     position: absolute;
-    background: @green;
-    background: url("../img/index-background-mobile@1x.jpg") no-repeat;
+    background: @green url("../img/index-background-mobile@1x.jpg") no-repeat;
     width: 320px;
     height: 305px;
     left: 0;
@@ -19,8 +18,7 @@
 
   @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
     &::before {
-      background: @green;
-      background-image: url("../img/index-background-mobile@2x.jpg");
+      background-image: @green url("../img/index-background-mobile@2x.jpg");
       background-size: 320px;
     }
   }
@@ -152,8 +150,7 @@
       content: "";
       display: block;
       position: absolute;
-      background: @green;
-      background: url("../img/index-background-desktop@1x.jpg") no-repeat;
+      background: @green url("../img/index-background-desktop@1x.jpg") no-repeat;
       min-width: 680px;
       height: 696px;
       z-index: -1;
@@ -164,8 +161,7 @@
 
     @media (min-resolution: 144dpi), (min-resolution: 1.5dppx) {
       &::before {
-        background: @green;
-        background: url("../img/index-background-desktop@2x.jpg") no-repeat;
+        background: @green url("../img/index-background-desktop@2x.jpg") no-repeat;
         background-size: 680px auto;
       }
     }
