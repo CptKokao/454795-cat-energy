@@ -7,67 +7,55 @@
 
 .social__list {
   margin: 0;
-  padding: 0;
+  padding-left: 73px;
+  padding-right: 73px;
   list-style: none;
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  flex-wrap: wrap;
 
   & li:nth-child(1) {
-    margin-left: 73px;
-    margin-top: -8px;
+    // margin-left: 73px;
+    margin-right: 37px;
+    margin-top: -4px;
   }
 
   & li:nth-child(2) {
-    margin-left: 37px;
+    // margin-left: 37px;
+    margin-right: 40px;
   }
 
   & li:nth-child(3) {
-    margin-left: 40px;
+    // margin-left: 40px;
   }
 }
 
 .social__link {
   display: block;
+
+  &:hover {
+    fill: @green;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.social__link--vk {
+.social__link-vk {
   width: 22px;
   height: 12px;
-
-  &:hover {
-    fill: @green;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
-.social__link--insta {
+.social__link-insta {
   width: 16px;
   height: 16px;
-
-  &:hover {
-    fill: @green;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
-.social__link--fb {
+.social__link-fb {
   width: 10px;
   height: 19px;
-
-  &:hover {
-    fill: @green;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
 
 @media (min-width: @tablet-width) {
@@ -75,43 +63,47 @@
     width: 160px;
     border-bottom: none;
     margin-top: 55px;
-    margin-left: 150px;
+    margin-left: 76px;
   }
 
   .social__list {
     width: 125px;
     margin: 0;
-    padding: 0;
+    // padding: 0;
     list-style: none;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
     & li:nth-child(1) {
-      margin-left: 0;
+      // margin-left: 0;
+      margin-right: 28px;
       margin-top: 1px;
     }
 
     & li:nth-child(2) {
-      margin-left: 28px;
+      // margin-left: 28px;
+      margin-right: 28px;
+      margin-top: 4px;
     }
 
     & li:nth-child(3) {
-      margin-left: 28px;
+      // margin-left: 28px;
+      margin-top: 3px;
     }
   }
 
-  .social__link--vk {
+  .social__link-vk {
     width: 30px;
     height: 16px;
   }
 
-  .social__link--insta {
+  .social__link-insta {
     width: 23px;
     height: 23px;
   }
 
-  .social__link--fb {
+  .social__link-fb {
     width: 14px;
     height: 28px;
   }
