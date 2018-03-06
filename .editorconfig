@@ -7,11 +7,18 @@
 # Если вы ведёте разработку в другом редакторе, зайдите
 # на http://editorconfig.org и в разделе «Download a Plugin»
 # скачайте дополнение для вашего редактора.
+#
+# end_of_line - позволяет выбрать, что использовать на концах строк; Значения: lf, cr, crlf
+# indent_size - позволяет задать ширину отступа использовании мягкой табуляции; Значения: Число
+# indent_style - позволяет задать жесткую или мягкую табуляцию для отступов; Значения: tab, space
+# insert_final_newline - позволяет убедиться, что в конце файла всегда будет новая строка; Значения: true, false
+# trim_trailing_whitespace - позволяет убрать пробелы из концов строк; Значения: true, false
+#
 
 root = true
 
 [*]
-charset = utf-8
+charset = utf-8  #
 end_of_line = lf
 indent_size = 2
 indent_style = space
